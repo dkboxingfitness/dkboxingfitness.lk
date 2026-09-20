@@ -1225,8 +1225,8 @@ body.menu-open { overflow: hidden; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
   .form-row { grid-template-columns: 1fr; }
   .hero-club-name { font-size: 36px; }
-  .club-switch { flex-direction: column; width: 90%; max-width: 320px; }
-  .club-switch span { width: 100%; text-align: center; padding: 12px 20px; }
+  .club-switch { flex-direction: row; width: auto; max-width: 92%; border-radius: 999px; margin-bottom: 34px; }
+  .club-switch span { width: auto; padding: 9px 16px; font-size: 9px; letter-spacing: 2px; white-space: nowrap; }
   .hero-logo-circle { width: 130px; height: 130px; }
   .hero-logo-img { width: 105px; height: 105px; }
   .hero-logo-img.dk-logo { width: 145px; height: 145px; }
@@ -1241,6 +1241,8 @@ body.menu-open { overflow: hidden; }
   .register-section { padding: 44px 0; }
   .hero-club-name { font-size: 28px; letter-spacing: 2px; }
   .hero-tagline { font-size: 10px; letter-spacing: 3px; margin-bottom: 20px; }
+  .club-switch { max-width: 94%; margin-bottom: 26px; }
+  .club-switch span { padding: 8px 12px; font-size: 8px; letter-spacing: 1.5px; }
   .hero-cta-row { flex-direction: column; width: 82%; }
   .hero-cta { width: 100%; text-align: center; padding: 13px 20px; }
   .hero-logo-circle { width: 108px; height: 108px; }
