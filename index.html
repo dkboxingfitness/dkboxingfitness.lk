@@ -63,7 +63,18 @@
     <li><a href="#join">Join</a></li>
   </ul>
   <a href="#join" class="nav-join dk-join">Train Now</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#join">Join</a>
+  <a href="#join" class="mobile-menu-join dk-join">Train Now</a>
+</div>
 
 <!-- HERO -->
 <div class="landing" id="home">
@@ -549,6 +560,23 @@ const obs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
 }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-scale").forEach(el => obs.observe(el));
+
+const hamburger = document.getElementById("navHamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener("click", () => {
+    const open = mobileMenu.classList.toggle("open");
+    hamburger.classList.toggle("open", open);
+    hamburger.setAttribute("aria-expanded", open);
+    document.body.classList.toggle("menu-open", open);
+  });
+  mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+    mobileMenu.classList.remove("open");
+    hamburger.classList.remove("open");
+    hamburger.setAttribute("aria-expanded", false);
+    document.body.classList.remove("menu-open");
+  }));
+}
 
 // Scroll progress + nav compact + WA button entrance
 const progressBar = document.getElementById("scroll-progress");
