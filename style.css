@@ -1207,13 +1207,20 @@ body.menu-open { overflow: hidden; }
   .nav-hamburger { display: flex; }
   .container { padding: 0 20px; }
   section { padding: 56px 0; }
+  .register-section { padding: 56px 0; }
+  .sec-title { margin-bottom: 10px; }
   .about-bw-inner, .about-dk-inner, .register-grid { grid-template-columns: 1fr; gap: 32px; }
-  .sports-grid, .services-grid { grid-template-columns: 1fr; }
-  .schedule-grid { grid-template-columns: repeat(2,1fr); }
-  .testimonial-card { flex-basis: 280px; padding: 26px 22px; }
+  .sports-grid { grid-template-columns: 1fr; gap: 1px; }
+  .services-grid { grid-template-columns: 1fr; gap: 1px; }
+  .sport-card, .service-card { padding: 26px 22px; }
+  .schedule-grid { grid-template-columns: repeat(2,1fr); gap: 14px; }
+  .schedule-card { padding: 24px 14px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .testimonial-card { flex-basis: 260px; padding: 24px 20px; min-height: 240px; }
   .testimonials-track { animation-duration: 26s; }
-  .map-inner { grid-template-columns: 1fr; }
-  .map-frame { height: 260px; }
+  .map-inner { grid-template-columns: 1fr; gap: 28px; }
+  .map-frame { height: 240px; }
+  .reg-form { padding: 26px 22px; }
   .footer-inner { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
   .form-row { grid-template-columns: 1fr; }
@@ -1231,13 +1238,37 @@ body.menu-open { overflow: hidden; }
   .nav-logo-circle img { width: 24px; height: 24px; }
   .container { padding: 0 16px; }
   section { padding: 44px 0; }
-  .hero-club-name { font-size: 30px; }
-  .hero-tagline { font-size: 10px; letter-spacing: 3px; }
-  .hero-cta-row { flex-direction: column; width: 80%; }
+  .register-section { padding: 44px 0; }
+  .hero-club-name { font-size: 28px; letter-spacing: 2px; }
+  .hero-tagline { font-size: 10px; letter-spacing: 3px; margin-bottom: 20px; }
+  .hero-cta-row { flex-direction: column; width: 82%; }
   .hero-cta { width: 100%; text-align: center; padding: 13px 20px; }
+  .hero-logo-circle { width: 108px; height: 108px; }
+  .hero-logo-img { width: 88px; height: 88px; }
+  .hero-logo-img.dk-logo { width: 120px; height: 120px; }
+  .sec-title { font-size: 34px; }
+  .sec-rule { margin-bottom: 30px; }
+  .sport-card, .service-card { padding: 22px 18px; }
+  .sport-name, .service-name { font-size: 19px; }
   .schedule-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .testimonial-card { flex-basis: 230px; padding: 20px 18px; min-height: 220px; }
+  .testimonial-quote { font-size: 42px; }
+  .testimonial-text { font-size: 14px; }
+  .reg-form { padding: 22px 16px; }
+  .form-title { font-size: 22px; }
+  .reg-info h3 { font-size: 26px; }
+  .social-links { gap: 8px; }
+  .soc-btn { padding: 7px 12px; font-size: 8px; }
   .footer-inner { gap: 28px; }
+  .footer-copy, .footer-reg { white-space: normal; }
   .mobile-menu { width: 100vw; padding: 32px; }
   .wa-float { width: 50px; height: 50px; bottom: 18px; right: 18px; }
   .wa-float svg { width: 26px; height: 26px; }
+}
+
+@media (max-width: 360px) {
+  .hero-club-name { font-size: 24px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .schedule-grid { grid-template-columns: 1fr; }
 }
